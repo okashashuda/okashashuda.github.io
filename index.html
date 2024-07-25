@@ -2,120 +2,133 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <!-- Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <!-- Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    <!-- Font Awesome icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- Font Awesome icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <!-- custom CSS-->
-    <link rel="stylesheet" href="styles.css" />
+  <!-- custom CSS-->
+  <link rel="stylesheet" href="styles.css" />
 
-    <title>Okasha Huda | Portfolio</title>
+  <title>Okasha Huda | Portfolio</title>
 </head>
 
 <body>
-    <!-- Navigation Menu -->
-    <header>
-        <nav>
-            <a href="#" class="logo">Okasha Huda</a>
-            <ul>
-                <li> <a href="#" class="active">Home</a> </li>
-                <li> <a href="#about">About</a> </li>
-                <li> <a href="#projects">Projects</a> </li>
-                <li> <a href="#contact">Contact</a> </li>
-                <li> <button>Resume</button></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navigation Menu -->
+  <header>
+    <nav>
+      <a href="#" class="logo">Okasha Huda</a>
+      <ul>
+        <li> <a href="#" class="active">Home</a> </li>
+        <li> <a href="#about">About</a> </li>
+        <li> <a href="#projects">Projects</a> </li>
+        <li> <a href="#contact">Contact</a> </li>
+        <li> 
+          <div class="button-container">
+            <a href="resume.pdf" target="_blank" class="resume-button">Resume</a>
+          </div>
+        </li>
+        <!-- <li>
+          <div class="button-container">
+            <button onclick="window.open('resume.pdf')" type="button">Resume</button>
+          </div>
+        </li> -->
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Introduction + Typewriter Animation + Animating Mouse Scroll -->
-    <section class="main">
-        <div class="intro">
-            <h1>HELLO, I'M OKASHA HUDA</h1>
-            <h3>a <span class="typewriter"></span></h3>
+  <!-- Introduction + Typewriter Animation + Animating Mouse Scroll -->
+  <section class="main">
+    <div class="intro">
+      <h1>HELLO, I'M OKASHA HUDA</h1>
+      <h3>a <span class="typewriter"></span></h3>
+    </div>
+
+    <div class="mouse"></div>
+  </section>
+
+
+  <!-- About Me -->
+  <section class="about-me" id="about">
+    <h1 class="section-title">About Me</h1>
+    <p> Hello there! I am an active student studying data science at Simon Fraser University. Through the
+      progression of my degree, I have learned and applied concepts in the areas of computer science as well as
+      data science. </p>
+    <p> ughh, idk what to write</p>
+    <p> come back to finish this later.</p>
+    <p> I'm open to job opportunities where I can contribute, learn and grow. If you have a good opportunity that
+      matches my skills and experience then contact me. </p>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h1 class="section-title">Projects</h1>
+
+    <div class="projects-grid">
+      <div class="projects-container">
+        <h1 class="project-title">box1 <span><i class="fa-brands fa-github"></i></span></h1>
+
+        <div class="project-desc">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
 
-        <div class="mouse"></div>
-    </section>
-
-
-    <!-- About Me -->
-    <section class="about-me" id="about">
-        <h1 class="section-title">About Me</h1>
-        <p> Hello there! I am an active student studying data science at Simon Fraser University. Through the
-            progression of my degree, I have learned and applied concepts in the areas of computer science as well as
-            data science. </p>
-        <p> ughh, idk what to write</p>
-        <p> come back to finish this later.</p>
-        <p> I'm open to job opportunities where I can contribute, learn and grow. If you have a good opportunity that
-            matches my skills and experience then contact me. </p>
-    </section>
-
-    <!-- Projects -->
-    <section class="projects" id="projects">
-        <h1 class="section-title">Projects</h1>
-
-        <div class="projects-grid">
-            <div class="projects-container">
-                <h1 class="project-title">box1 <span><i class="fa-brands fa-github"></i></span></h1>
-
-                <div class="project-desc">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-
-                <div class="project-tools">
-                    <ul>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>HTML & CSS</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="projects-container">
-                <h1>box2</h1>
-            </div>
-
-            <div class="projects-container">
-                <h1>box3</h1>
-            </div>
-
-            <div class="projects-container">
-                <h1>box4</h1>
-            </div>
-
-            <div class="projects-container">
-                <h1>box5</h1>
-            </div>
+        <div class="project-tools">
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>HTML & CSS</li>
+          </ul>
         </div>
-    </section>
+      </div>
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <h1 class="section-title">Contact</h1>
-        <p> I'm open to job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skill set and experience then contact me below. If you would like to contact me via email, please see my resume here.</p>
+      <div class="projects-container">
+        <h1>box2</h1>
+      </div>
 
-        <a href="https://www.linkedin.com/in/okashashuda/" title="Linkedin" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        <a href="https://github.com/okashashuda" title="GitHub" target="_blank"><i class="fa-brands fa-github-square fa-2xl"></i></a>
-    </section>
+      <div class="projects-container">
+        <h1>box3</h1>
+      </div>
 
-    <!-- Footer -->
-    <footer>
-        &copy Copyright 2024. Designed and Coded by Okasha Huda
-    </footer>
+      <div class="projects-container">
+        <h1>box4</h1>
+      </div>
+
+      <div class="projects-container">
+        <h1>box5</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h1 class="section-title">Contact</h1>
+    <p> I'm open to job opportunities where I can contribute, learn and grow. If you have a good opportunity that
+      matches my skill set and experience then contact me below. If you would like to contact me via email, please see
+      my resume here.</p>
+
+    <a href="https://www.linkedin.com/in/okashashuda/" title="Linkedin" target="_blank"><i
+        class="fa-brands fa-linkedin fa-2xl"></i></a>
+    <a href="https://github.com/okashashuda" title="GitHub" target="_blank"><i
+        class="fa-brands fa-github-square fa-2xl"></i></a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy Copyright 2024. Designed and Coded by Okasha Huda
+  </footer>
 
 
-    <!-- Typed.js Typewriter Animation & custom JS -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="scripts.js"></script>
+  <!-- Typed.js Typewriter Animation & custom JS -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="scripts.js"></script>
 
 </body>
 

@@ -1,3 +1,4 @@
+// Typewriter Animation
 var typed = new Typed(".typewriter", {
     strings: ["student", "data science enthusiast", "wanna-be software engineer", "sports fanatic"],
     typeSpeed: 75,
@@ -5,6 +6,7 @@ var typed = new Typed(".typewriter", {
     loop: true
 })
 
+// Navigation Bar Active Scroll Animation
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav ul li a");
