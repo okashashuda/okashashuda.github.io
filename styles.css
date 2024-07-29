@@ -12,11 +12,12 @@ body {
 
 
 /* Navigation Bar */
-nav {
+.nav {
     position: fixed;
     z-index: 9999;
     width: 100%;
-    height: 100px;
+    height: auto;
+    /* height: 100px; */
     background-color: #000;
     display: flex;
     align-items: center;
@@ -24,25 +25,31 @@ nav {
     font-size: large;
     font-weight: 600;
     top: 0;
+    overflow: hidden;
 }
 
-nav .logo {
-    text-decoration: none;
-    color: #fff;
+.nav .logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
     margin-right: auto;
     margin-left: 50px;
+}
+
+.nav .logo a {
+    text-decoration: none;
+    color: #fff;
     font-size: x-large;
     font-weight: 700;
 }
 
-nav ul {
+.nav .menu-items ul {
     display: flex;
     margin: 0;
     padding: 0;
 }
 
 
-nav ul li {
+.nav .menu-items ul li {
     list-style: none;
     display: flex;
     align-items: center;
@@ -50,7 +57,7 @@ nav ul li {
 }
 
 
-nav ul li a {
+.nav ul li a {
     display: block;
     position: relative;
     text-decoration: none;
@@ -59,7 +66,7 @@ nav ul li a {
     color: #fff;
 }
 
-nav ul li a:not(.resume-button)::after {
+.nav ul li a:not(.resume-button)::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -72,24 +79,29 @@ nav ul li a:not(.resume-button)::after {
     transition: transform 0.25s ease-out;
 }
 
-nav ul li a:not(.resume-button):hover::after /*, a.active::after */ {
+.nav ul li a:not(.resume-button):hover::after
+
+/*, a.active::after */
+    {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-nav ul li a.active {
+.nav ul li a.active {
     color: #00ADB5;
 }
 
+
 /* specifically Resume Button on Navigation Bar */
-nav ul li .button-container {
+.nav ul li .button-container {
     background-color: #00ADB5;
     border-radius: 5px;
     margin: 0px 20px;
 }
 
-nav ul li .button-container .resume-button {
-    margin: 0; /* specifically needs margin: 0; because otherwise it inherits margin: 0 20px; from nav ul li a{} by default; */
+.nav ul li .button-container .resume-button {
+    margin: 0;
+    /* specifically needs margin: 0; because otherwise it inherits margin: 0 20px; from nav ul li a{} by default; */
     padding: 10px 10px;
 
     background-color: #0f0f0f;
@@ -102,9 +114,97 @@ nav ul li .button-container .resume-button {
     cursor: pointer;
 }
 
-nav ul li .resume-button:hover {
+.nav ul li .resume-button:hover {
     transform: translate(-5px, -5px);
     transition: all ease;
+}
+
+.nav .menu-icon {
+    padding: 5px 5px;
+    margin: 15px 15px;
+    display: none;
+    cursor: pointer;
+}
+
+.nav .menu-icon i {
+    color: #fff;
+}
+
+
+/* Dropdown Menu (for responsive design) */
+.dropdown-menu {
+    display: none;
+    /* position: fixed; */
+    position: absolute;
+    right: 2rem;
+    top: 110px;
+    height: 0px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: auto;
+}
+
+.dropdown-menu li {
+    list-style: none;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.dropdown-menu li a.active {
+    color: #00ADB5;
+}
+
+.dropdown-menu .button-container {
+    background-color: #00ADB5;
+    border-radius: 5px;
+    display: inline;
+}
+
+.dropdown-menu .button-container .resume-button {
+    background-color: #0f0f0f;
+    border: 1px solid #00ADB5;
+    border-radius: 5px;
+    color: #00ADB5;
+    width: 100px;
+    padding: 10px 15px;
+    margin: auto;
+}
+
+@media (max-width: 1100px) {
+    .menu-items {
+        display: none;
+    }
+
+    .nav .menu-icon {
+        display: flex;
+    }
+
+    .dropdown-menu.open {
+        position: fixed;
+        display: block;
+    }
+}
+
+@media (max-width: 350px) {
+    .dropdown-menu {
+        width: 200px;
+    }
 }
 
 
@@ -161,6 +261,7 @@ nav ul li .resume-button:hover {
         opacity: 1;
         top: 10px;
     }
+
     to {
         opacity: 0;
         top: 25px;
@@ -223,7 +324,7 @@ nav ul li .resume-button:hover {
     border-radius: 10px;
     background-color: #18181b;
     height: 35vh;
-    
+
 }
 
 .project-title {
@@ -247,18 +348,21 @@ nav ul li .resume-button:hover {
     align-items: center;
     justify-content: center;
     letter-spacing: 1px;
-    height: 100%; /* Takes the remaining space */
-    color: #fff; /* Adjust as necessary */
+    height: 100%;
+    /* Takes the remaining space */
+    color: #fff;
+    /* Adjust as necessary */
     margin: 0px 5px;
 }
 
-.project-tools ul{
+.project-tools ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     position: static;
 }
 
-.project-tools ul li{
+.project-tools ul li {
     border: 1px solid #00ADB5;
     background-color: #00ADB5;
     color: #fff;
@@ -280,6 +384,7 @@ nav ul li .resume-button:hover {
     margin: 0px 50px;
     margin-bottom: 700px;
 }
+
 .contact .section-title {
     font-size: 30px;
     font-weight: 700;
@@ -297,7 +402,7 @@ nav ul li .resume-button:hover {
 }
 
 .contact a:hover {
-    color:#00ADB5;
+    color: #00ADB5;
     transition: all 0.5s ease;
 }
 
@@ -309,4 +414,3 @@ footer {
     margin-bottom: 30px;
     text-align: center;
 }
-
