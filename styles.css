@@ -130,6 +130,7 @@ body {
 
 /* Dropdown Menu (for responsive design) */
 .dropdown-menu {
+    z-index: 9999;
     display: none;
     /* position: fixed; */
     position: absolute;
