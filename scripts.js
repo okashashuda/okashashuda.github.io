@@ -25,13 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Dropdown Menu Open/Close Animation
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".menu-icon");
     const menuIconLogo = menuIcon.querySelector("i");
     const dropdown = document.querySelector(".dropdown-menu");
     const dropdownLinks = dropdown.querySelectorAll("a");
 
-    menuIcon.addEventListener("click", function() {
+    menuIcon.addEventListener("click", function () {
         dropdown.classList.toggle("open");
         const isOpen = dropdown.classList.contains("open");
 
@@ -42,9 +42,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // auto-close when a link on the dropdown menu has been clicked
     dropdownLinks.forEach(link => {
-        link.addEventListener("click", function() {
+        link.addEventListener("click", function () {
             dropdown.classList.remove("open");
             menuIconLogo.className = "fa fa-bars fa-xl"; //reset icon to menu
         });
     });
 });
+
+// Contact Form Email Verification
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    const emailField = document.getElementById("email");
+    const emailValue = emailField.value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(emailValue)) {
+        alert("Please enter a valid email address.");
+        event.preventDefault();
+    }
+});
+
+// Contact Form Reset Form Fields
+window.onload = function () {
+    // Reset the form fields when the page loads
+    document.getElementById("form").reset();    
+};
+

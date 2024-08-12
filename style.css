@@ -3,11 +3,17 @@
     margin: 0;
     font-family: 'Poppins';
     scroll-behavior: smooth;
+    --nav-color: #000;
+    --bg-color: #080808;
+    --text-color: #fff;
+    --primary-color: #00ADB5;
+    --secondary-color: #0f0f0f;
+    --tertiary-color: #18181b;
 }
 
 body {
-    background-color: #0f0f0f;
-    color: #fff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 
@@ -18,7 +24,7 @@ body {
     width: 100%;
     height: auto;
     /* height: 100px; */
-    background-color: #000;
+    background-color: var(--nav-color);
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -37,7 +43,7 @@ body {
 
 .nav .logo a {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
     font-size: x-large;
     font-weight: 700;
 }
@@ -61,7 +67,7 @@ body {
     text-decoration: none;
     padding: 0 5px;
     margin: 0 20px;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .nav ul li a:not(.resume-button)::after {
@@ -72,7 +78,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #00ADB5;
+    background-color: var(--primary-color);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -85,13 +91,13 @@ body {
 }
 
 .nav ul li a.active {
-    color: #00ADB5;
+    color: var(--primary-color);
 }
 
 
 /* specifically Resume Button on Navigation Bar */
 .nav ul li .button-container {
-    background-color: #00ADB5;
+    background-color: var(--primary-color);
     border-radius: 5px;
     margin: 0px 20px;
 }
@@ -101,9 +107,9 @@ body {
     /* specifically needs margin: 0; because otherwise it inherits margin: 0 20px; from nav ul li a{} by default; */
     padding: 10px 10px;
 
-    background-color: #0f0f0f;
-    color: #00ADB5;
-    border: 1px solid #00ADB5;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     letter-spacing: 2px;
     font-size: large;
@@ -160,26 +166,26 @@ body {
     display: block;
     width: 100%;
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
     font-weight: 600;
     letter-spacing: 2px;
 }
 
 .dropdown-menu li a.active {
-    color: #00ADB5;
+    color: var(--primary-color);
 }
 
 .dropdown-menu .button-container {
-    background-color: #00ADB5;
+    background-color: var(--primary-color);
     border-radius: 5px;
     display: inline;
 }
 
 .dropdown-menu .button-container .resume-button {
-    background-color: #0f0f0f;
-    border: 1px solid #00ADB5;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
-    color: #00ADB5;
+    color: var(--primary-color);
     width: 100px;
     padding: 10px 15px;
     margin: auto;
@@ -225,7 +231,7 @@ body {
 .intro span {
     /* margin-left: 3px; */
     font-weight: 400;
-    color: #00ADB5;
+    color: var(--primary-color);
 }
 
 
@@ -240,7 +246,7 @@ body {
     /* transform: translate(-50%, -50%); */
     width: 22px;
     height: 35px;
-    border: 2px solid #fff;
+    border: 2px solid var(--text-color);
     border-radius: 15px;
 }
 
@@ -250,7 +256,7 @@ body {
     top: 10px;
     left: 50%;
     transform: translate(-50%);
-    border: 2px solid #fff;
+    border: 2px solid var(--text-color);
     border-radius: 15px;
     animation: mouse-scroll 1.75s infinite;
 }
@@ -271,8 +277,8 @@ body {
 /* About Me */
 .about-me {
     padding-top: 120px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
     margin-bottom: 50px;
 }
 
@@ -294,8 +300,8 @@ body {
 /* Projects */
 .projects {
     padding-top: 120px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
     margin-bottom: 50px;
 }
 
@@ -309,7 +315,7 @@ body {
 .projects .projects-grid {
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 29rem));
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 28rem));
     justify-content: center;
     margin-bottom: 50px;
     /* width: calc((100vh - 200) / 3); 100vh is the width of the screen and -200 is .projects{} margin on the left and right */
@@ -321,11 +327,10 @@ body {
     margin: 15px 15px;
 
 
-    border: 4px solid #18181b;
+    border: 4px solid var(--tertiary-color);
     border-radius: 10px;
-    background-color: #18181b;
+    background-color: var(--tertiary-color);
     height: 35vh;
-
 }
 
 .project-title {
@@ -336,11 +341,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2px 5px;
+    margin: 5px 15px;
 }
 
 .project-title i {
-    color: #00ADB5;
+    color: var(--primary-color);
 }
 
 .project-desc {
@@ -348,14 +353,18 @@ body {
     position: relative;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 1px;
     height: 100%;
     /* Takes the remaining space */
-    color: #fff;
+    color: var(--text-color);
     /* Adjust as necessary */
-    margin: 0px 5px;
+    margin: 0px 15px;
 }
+
+/* .project-tools {
+    margin: 0px 15px;
+} */
 
 .project-tools ul {
     list-style: none;
@@ -365,9 +374,9 @@ body {
 }
 
 .project-tools ul li {
-    border: 1px solid #00ADB5;
-    background-color: #00ADB5;
-    color: #fff;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border-radius: 16px;
     margin: 10px 5px;
     padding: 3px 8px;
@@ -380,45 +389,122 @@ body {
 }
 
 
-/* Contact */
+/* Contact + Contact Form*/
 .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     padding-top: 120px;
-    margin: 0px 50px;
-    /* margin-bottom: 700px; */
+    margin: 0px 80px;
 }
 
-.contact .section-title {
+.contact .contact-text .section-title {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 30px;
     letter-spacing: 3px;
 }
 
-.contact p {
+.contact .contact-text p {
     font-size: 20px;
     margin-bottom: 30px;
     letter-spacing: 1px;
     line-height: 40px;
+    /* padding-right: 5px; */
 }
 
-.contact a {
-    color: #fff;
-    margin-right: 15px;
+.contact .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    margin-left: 50px;
 }
 
-.contact a:hover {
-    color: #00ADB5;
-    transition: all 0.5s ease;
+.contact-form .contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.contact .contact-form textarea {
+    height: 150px;
+    padding-top: 15px;
+    resize: vertical;
+}
+
+.contact-inputs:focus {
+    /* border: 2px solid var(--primary-color); */
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.contact-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 0px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    gap: 10px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-color);
+    transition: ease;
+}
+
+@media (max-width: 1100px) {
+    .about-me, .projects, .contact {
+        margin: 0px 40px;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+        flex-direction: column;
+     }
+
+    .contact .contact-form {
+        margin-left: 0px;
+     }
+
+    .contact-form .contact-inputs {
+        width: 70vw;
+    }
 }
 
 
 /* Footer */
 footer {
     bottom: 0;
-    background-color: #000;
+    background-color: var(--nav-color);
     margin-top: 50px;
-    padding: 10px;
+    padding-bottom: 20px;
     font-size: 12px;
     text-align: center;
     letter-spacing: 1px;
+}
+
+footer a {
+    color: var(--text-color);
+    margin-right: 15px;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+    transition: all 0.5s ease;
+}
+
+footer a i {
+    margin: 20px 0px;
 }
