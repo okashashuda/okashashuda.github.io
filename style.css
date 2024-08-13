@@ -107,7 +107,7 @@ body {
     /* specifically needs margin: 0; because otherwise it inherits margin: 0 20px; from nav ul li a{} by default; */
     padding: 10px 10px;
 
-    background-color: var(--secondary-color);
+    background-color: var(--nav-color);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     border-radius: 5px;
@@ -191,27 +191,6 @@ body {
     margin: auto;
 }
 
-@media (max-width: 1100px) {
-    .menu-items {
-        display: none;
-    }
-
-    .nav .menu-icon {
-        display: flex;
-    }
-
-    .dropdown-menu.open {
-        position: fixed;
-        display: block;
-    }
-}
-
-@media (max-width: 350px) {
-    .dropdown-menu {
-        width: 200px;
-    }
-}
-
 
 /* Typewriter Effect */
 .main {
@@ -226,6 +205,8 @@ body {
     font-size: 30px;
     letter-spacing: 4px;
     padding: 0px 15px;
+    width: 672px;
+    /* note: to stop typewriter from readjusting for longer words, you can just set a fixed width (exactly 670.325px for now) */
 }
 
 .intro span {
@@ -330,7 +311,7 @@ body {
     border: 4px solid var(--tertiary-color);
     border-radius: 10px;
     background-color: var(--tertiary-color);
-    height: 35vh;
+    height: 250px;
 }
 
 .project-title {
@@ -355,16 +336,14 @@ body {
     justify-content: center;
     font-size: 14px;
     letter-spacing: 1px;
-    height: 100%;
-    /* Takes the remaining space */
+    height: 100%; /* takes the remaining space */
     color: var(--text-color);
-    /* Adjust as necessary */
     margin: 0px 15px;
 }
 
-/* .project-tools {
+.project-tools {
     margin: 0px 15px;
-} */
+}
 
 .project-tools ul {
     list-style: none;
@@ -378,7 +357,9 @@ body {
     background-color: var(--primary-color);
     color: var(--text-color);
     border-radius: 16px;
-    margin: 10px 5px;
+    /* margin: 10px 5px; */
+    margin-right: 10px;
+    margin-bottom: 10px;
     padding: 3px 8px;
     font-size: 13px;
     font-weight: 500;
@@ -386,6 +367,25 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.project-link {
+    text-align: center;
+    margin: 10px 15px;
+    padding: 5px 0px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.project-link:hover {
+    background-color: var(--nav-color);
+    border: 1px solid red;
+}
+
+.project-link a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 
@@ -464,25 +464,6 @@ body {
     transition: ease;
 }
 
-@media (max-width: 1100px) {
-    .about-me, .projects, .contact {
-        margin: 0px 40px;
-    }
-
-    .contact {
-        flex-wrap: wrap;
-        flex-direction: column;
-     }
-
-    .contact .contact-form {
-        margin-left: 0px;
-     }
-
-    .contact-form .contact-inputs {
-        width: 70vw;
-    }
-}
-
 
 /* Footer */
 footer {
@@ -507,4 +488,44 @@ footer a:hover {
 
 footer a i {
     margin: 20px 0px;
+}
+
+
+/* Media Queries for responsive design */
+@media (max-width: 1100px) {
+    .menu-items {
+        display: none;
+    }
+
+    .nav .menu-icon {
+        display: flex;
+    }
+
+    .dropdown-menu.open {
+        position: fixed;
+        display: block;
+    }
+
+    .about-me, .projects, .contact {
+        margin: 0px 40px;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+        flex-direction: column;
+     }
+
+    .contact .contact-form {
+        margin-left: 0px;
+     }
+
+    .contact-form .contact-inputs {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 350px) {
+    .dropdown-menu {
+        width: 200px;
+    }
 }
