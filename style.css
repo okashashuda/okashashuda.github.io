@@ -6,9 +6,9 @@
     --nav-color: #000;
     --bg-color: #080808;
     --text-color: #fff;
-    --primary-color: #00ADB5;
-    --secondary-color: #0f0f0f;
-    --tertiary-color: #18181b;
+    --primary-color: #04928E;
+    --secondary-color: #035855;
+    --tertiary-color: #171717;
 }
 
 body {
@@ -130,7 +130,7 @@ body {
 }
 
 .nav .menu-icon i {
-    color: #fff;
+    color: var(--text-color);
 }
 
 
@@ -182,7 +182,7 @@ body {
 }
 
 .dropdown-menu .button-container .resume-button {
-    background-color: var(--secondary-color);
+    background-color: var(--bg-color);
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     color: var(--primary-color);
@@ -311,7 +311,8 @@ body {
     border: 4px solid var(--tertiary-color);
     border-radius: 10px;
     background-color: var(--tertiary-color);
-    height: 250px;
+    /* height: 250px; */
+    height: auto;
 }
 
 .project-title {
@@ -343,6 +344,7 @@ body {
 
 .project-tools {
     margin: 0px 15px;
+    margin-top: 10px;
 }
 
 .project-tools ul {
@@ -353,13 +355,13 @@ body {
 }
 
 .project-tools ul li {
-    border: 1px solid var(--primary-color);
-    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
     color: var(--text-color);
     border-radius: 16px;
     /* margin: 10px 5px; */
     margin-right: 10px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     padding: 3px 8px;
     font-size: 13px;
     font-weight: 500;
@@ -374,12 +376,13 @@ body {
     margin: 10px 15px;
     padding: 5px 0px;
     border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
     border-radius: 5px;
 }
 
 .project-link:hover {
-    background-color: var(--nav-color);
-    border: 1px solid red;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
 }
 
 .project-link a {
@@ -454,13 +457,14 @@ body {
     color: var(--text-color);
     gap: 10px;
     border: 1px solid var(--primary-color);
-    background-color: var(--bg-color);
+    background-color: var(--primary-color);
     border-radius: 5px;
     cursor: pointer;
 }
 
 .contact-form button:hover {
-    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
     transition: ease;
 }
 
