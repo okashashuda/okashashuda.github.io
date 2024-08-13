@@ -6,6 +6,7 @@ var typed = new Typed(".typewriter", {
     loop: true
 })
 
+
 // Navigation Bar + Dropdown Menu Active Scroll Animation
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     changeActiveLink();
     window.addEventListener("scroll", changeActiveLink);
 });
+
 
 // Dropdown Menu Open/Close Animation
 document.addEventListener("DOMContentLoaded", function () {
@@ -49,21 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Contact Form Email Verification
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-    const emailField = document.getElementById("email");
-    const emailValue = emailField.value;
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailPattern.test(emailValue)) {
-        alert("Please enter a valid email address.");
-        event.preventDefault();
-    }
-});
 
 // Contact Form Reset Form Fields
 window.onload = function () {
-    // Reset the form fields when the page loads
-    document.getElementById("form").reset();    
-};
+    const form = document.querySelector(".contact-form");
 
+    form.addEventListener("submit", function (event) {
+        // delay the reset to allow form submission to complete
+        setTimeout(function() {
+            form.reset();
+        }, 100); // adjust the delay as needed
+    });
+};
