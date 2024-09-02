@@ -1,6 +1,8 @@
 # Okasha Huda | Personal Portfolio Website
 Welcome to my personal portfolio website! This project showcases my skills, experience, and projects in a clean and professional manner. The website is designed to be responsive, user-friendly, and visually appealing across various devices.
 
+LINK TO WEBSITE: [https://okashahuda.com/](https://okashahuda.com/)
+
 ## Table of Contents
 - [Overview](#overview) 
 - [Features](#features)
@@ -25,4 +27,4 @@ This portfolio website is a personal project aimed at providing a platform to hi
 - Web3Forms API: For handling form submissions securely
 
 ## Contact
-Feel free to reach out to me through the contact form on the website or via [Linkedin](https://www.linkedin.com/in/okashashuda/)
+Feel free to reach out to me through the contact form on the [website](https://okashahuda.com/) or via [Linkedin](https://www.linkedin.com/in/okashashuda/)
